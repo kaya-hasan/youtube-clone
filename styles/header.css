@@ -16,6 +16,7 @@
     left: 0;
     right: 0;
     z-index: 100;
+    background-color: rgb(245, 245, 245);
   }
 
   .left-section{
@@ -29,6 +30,7 @@
     height: 24px;
     margin-left: 24px;
     margin-right: 24px;
+    cursor: pointer;
   }
 
   .youtube-logo {
@@ -49,9 +51,7 @@
     height: 36px;
     padding-left: 10px;
     font-size: 16px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(168, 168, 168);
+    border: 1px solid rgb(168, 168, 168);
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 0px;
     border-top-left-radius: 40px;
@@ -65,7 +65,6 @@
     outline: none;
   }
   .search-bar::placeholder{
-    font-family: Roboto, Arial;
     font-size: 16px;
   }
 
@@ -89,11 +88,31 @@
 .search-button,
 .voice-search-button,
 .upload-icon-container,
-.notifications-icon-container{
+.notifications-icon-container,
+.left-section{
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+.left-section .tooltip{
+  font-family: Roboto, Arial;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 102px;
+    padding-right: 6px;
+    border-radius: 5px;
+    font-size: 12px;
+    bottom: -35px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
 }
 
   .search-button .tooltip,
@@ -101,7 +120,6 @@
   .upload-icon-container .tooltip,
   .notifications-icon-container .tooltip
   {
-    font-family: Roboto, Arial;
     position: absolute;
     background-color: gray;
     color: white;
@@ -121,7 +139,8 @@
   .search-button:hover .tooltip,
   .voice-search-button:hover .tooltip,
   .upload-icon-container:hover .tooltip,
-  .notifications-icon-container:hover .tooltip
+  .notifications-icon-container:hover .tooltip,
+  .left-section:hover .tooltip
   {
     opacity: 1;
   }
